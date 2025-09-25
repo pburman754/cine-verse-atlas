@@ -57,6 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Caset cinematic colors
+        cinematic: {
+          black: "hsl(var(--cinematic-black))",
+          dark: "hsl(var(--cinematic-dark))",
+          darker: "hsl(var(--cinematic-darker))",
+          gold: "hsl(var(--cinematic-gold))",
+          "gold-muted": "hsl(var(--cinematic-gold-muted))",
+          silver: "hsl(var(--cinematic-silver))",
+          gray: "hsl(var(--cinematic-gray))",
+          text: "hsl(var(--cinematic-text))",
+          "text-muted": "hsl(var(--cinematic-text-muted))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

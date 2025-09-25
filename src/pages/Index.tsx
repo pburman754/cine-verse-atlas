@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import MoviesGrid from '@/components/MoviesGrid';
+import StatsSection from '@/components/StatsSection';
+import Footer from '@/components/Footer';
+import { sampleMovies } from '@/data/sampleMovies';
 
 const Index = () => {
+  const trendingMovies = sampleMovies.slice(0, 5);
+  const topRatedMovies = [...sampleMovies].sort((a, b) => b.rating - a.rating).slice(0, 5);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <MoviesGrid 
+          movies={trendingMovies}
+          title="Trending Now"
+          subtitle="The most popular movies and shows this week"
+        />
+        <StatsSection />
+        <MoviesGrid 
+          movies={topRatedMovies}
+          title="Top Rated"
+          subtitle="Highest rated content from our community"
+        />
+      </main>
+      <Footer />
     </div>
   );
 };
